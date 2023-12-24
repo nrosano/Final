@@ -34,6 +34,9 @@
                     </a>
                     <p class="post-meta">Posteado por {{posts.author}} el {{posts.date}}</p>
                     <a href="{%url 'Detail' posts.id%}">Leer más</a>
+                    {% if posts.image %}
+                    <img src="{{ posts.image.url }}" alt="{{ posts.title }}">
+                    {% endif %}
                 </div>
                 {% endfor %}
                 <div class="row gx-4 gx-lg-5 justify-content-center">
